@@ -38,3 +38,9 @@ SELECT * from students WHERE name = 'Layal';
 UPDATE graduates SET Graduation = '2020-10-06';
 DELETE FROM students WHERE name = 'Layal';
 
+Joins:
+--------
+CREATE TABLE employecompany AS SELECT employees.Name, Company, Date FROM employees INNER JOIN companies ON employees.Company = companies.Name;
+SELECT Name from employecompany WHERE Date < 2000;
+SELECT Company from employees WHERE Role='Graphic Designer';
+
