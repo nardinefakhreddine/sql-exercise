@@ -23,3 +23,18 @@ Basic queries:
 7-Update students SET Points=180 where name="Alex"
      //Result: query executed successfully. Took 0ms, 1 rows affected
 
+Creating Table:
+----------------
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT
+);
+INSERT INTO graduates (ID, Name, Age, Gender, Points) 
+SELECT * from students WHERE name = 'Layal';
+UPDATE graduates SET Graduation = '2020-10-06';
+DELETE FROM students WHERE name = 'Layal';
+
