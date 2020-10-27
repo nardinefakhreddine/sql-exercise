@@ -44,3 +44,11 @@ CREATE TABLE employecompany AS SELECT employees.Name, Company, Date FROM employe
 SELECT Name from employecompany WHERE Date < 2000;
 SELECT Company from employees WHERE Role='Graphic Designer';
 
+Count & Filter:
+----------------
+
+SELECT name, max(Points) AS 'highest number of points' FROM students;
+SELECT avg(Points) AS 'Average P' FROM students;
+SELECT COUNT(ID) from students WHERE Points = 500;
+SELECT * from students WHERE Name like '%s%';
+SELECT * from students ORDER BY Points DESC;
